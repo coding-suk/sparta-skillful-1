@@ -1,4 +1,8 @@
 package com.web.startspring.repository;
 
-public class ManagerRepository {
+import com.web.startspring.entity.Manager;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ManagerRepository extends JpaRepository<Manager, Long> {
+    Manager createManager(Manager manager);
 }
